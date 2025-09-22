@@ -1,9 +1,20 @@
 <html>
     <head>
-        
+        <script>
+            function dragStart(event) {
+                event.dataTransfer.setData("text", event.target.id);
+            }
+            function dragover(event) {
+                event.preventDefault();
+            }
+            function drop(event) {  
+                event.preventDefault();
+                var data = event.dataTransfer.getData("text");
+                event.target.appendChild(document.getElementById(data));
+            }
+        </script>
     </head>
     <body>
-        <img src="https://share.icloud.com/photos/02fmIj4AYBbx0mdE8Q34nPxpA" alt="Hydrogen Texture">
-        <img id="Hydrogen Texture" draggable="true">
+        <img id="Hydrogen Texture" src="https://share.icloud.com/photos/02fmIj4AYBbx0mdE8Q34nPxpA" alt="Hydrogen atom texture with swirling blue and white patterns suggesting energy and movement set against a dark background evoking a sense of scientific curiosity and dynamic motion" draggable="true" width="10" height="10">
     </body>
 </html>
