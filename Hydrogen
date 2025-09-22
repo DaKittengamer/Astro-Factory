@@ -1,5 +1,10 @@
 <html>
     <head>
+        <style>
+            #Hydrogen\ Texture {
+                cursor: move;
+            }
+        </style>
         <script>
             function dragStart(event) {
                 event.dataTransfer.setData("text", event.target.id);
